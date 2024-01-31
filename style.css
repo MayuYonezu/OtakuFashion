@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-family: "vdl-megamarupop-futoline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+p {
+    font-family: sans-serif;
+    font-family: "vdl-megamarupop-futoline", sans-serif;
+    padding: 10px;
+    font-size: 20px;
+}
+
+a {
+    transition: 1s;
+}
+
+a :hover{
+    box-shadow: 0px 0px 30px #f271be;
+    transition: 1s;
+}
+
+header {
+    height: 80px;
+    background-color: #898989;
+}
+
+header .container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+header .containe p {
+    padding: 0;
+}
+
+.firstView {
+    width: 100vw;
+    height: 56.25vw;
+}
+
+.firstView img {
+    width: 100vw;
+    height: auto;
+}
+
+.pink {
+    background-image: url(./img/back_pink.png);
+    background-repeat: repeat;
+    padding-bottom: 80px;
+}
+
+.pink h1, 
+.pink h2 {
+    color: white;
+    text-shadow: 0px 0px 10px #f271be;
+}
+
+.black {
+    background-image: url(./img/back_black.png);
+    background-repeat: repeat;
+    padding: 80px 0;
+}
+
+.black h1, 
+.black h2 {
+    color: white;
+    text-shadow: 0px 0px 10px #333;
+}
+
+
+.section {
+    text-align: center;
+    padding: 80px 0 80px;
+    margin: 0 200px;
+}
+
+.p-contents {
+    display: flex;
+    justify-content: center;
+}
+
+.about-contents {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 50px 0;
+    color: #898989;
+    background-color: white;
+    border: 10px solid #F1D3E5;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+.flex-img {
+    display: flex;
+    justify-content: center;
+}
+
+.bland {
+    margin-top: 30px;
+}
+
+.bland a{
+    font-family: "minion-pro", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    color: #898989;
+    text-decoration: none;
+    width: 100%;
+}
+
+.bland-box {
+    text-align: left;
+    margin-top: 10px;
+    padding: 30px 50px;
+    color: #898989;
+    background-color: #fff;
+}
+
+.intax img{
+    height: 500px;
+    width: auto;
+    margin: 0 15px;
+}
+
+.characterristics {
+    margin: 50px 0;
+    padding: 50px;
+    border-radius: 30px;
+    background-color: #595959;
+}
+
+.whiteColor {
+    background-color: white;
+    border: 15px solid #F1D3E5;
+    box-sizing: border-box;
+    color: #333;
+}
+
+.blackColor {
+    background-color: #333;
+    border: 15px solid #F1D3E5;
+    box-sizing: border-box;
+    color: #F1D3E5;
+}
+
+.grayColor {
+    background-color: #898989;
+    border: 15px solid #333;
+    box-sizing: border-box;
+    color: white;
+}
+
+.modal-detail {
+    border-radius: 30px;
+    padding: 10px 0;
+}
+
+.about-contents {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 30px;
+    padding: 50px 0;
+    color: #898989;
+    background-color: white;
+    border: 10px solid #F1D3E5;
+    box-sizing: border-box;
+}
+
+/*モーダルを開くボタン*/
+.modal-open,
+.modal-open2,
+.modal-open3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	font-weight: bold;
+	margin: auto;
+	cursor: pointer;
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    margin: 0 15px;
+    transition: 1s;
+}
+
+.modal-open:hover,
+.modal-open2:hover,
+.modal-open3:hover{
+    box-shadow: 0px 0px 30px #F1D3E5;
+    transition: 1s;
+}
+
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container,
+.modal-container2,
+.modal-container3{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,50%);
+	padding: 40px 20px;
+	overflow: auto;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+    box-sizing: border-box;
+}
+
+/*モーダル本体の擬似要素の指定*/
+.modal-container:before,
+.modal-container2:before,
+.modal-container3:before{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active,
+.modal-container2.active,
+.modal-container3.active{
+	opacity: 1;
+	visibility: visible;
+}
+
+/*モーダル枠の指定*/
+.modal-body,
+.modal-body2,
+.modal-body3 {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 60%;
+	width: 100%;
+}
+
+/*モーダルを閉じるボタンの指定*/
+.modal-close,
+.modal-close2,
+.modal-close3 {
+	position: absolute;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	top: -40px;
+	right: -40px;
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+	color: #fff;
+	cursor: pointer;
+}
+
+/*モーダル内のコンテンツの指定*/
+.modal-content,
+.modal-content2,
+.modal-content3 {
+	text-align: left;
+	padding: 0px;
+}
+
+.summarize-contents {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 50px 0;
+    color: white;
+    background-color: #333333;
+    border: 10px solid white;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+
+footer{
+    font-family: "vdl-megamarupop-futoline", sans-serif;
+    text-align: center;
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+}
+
+@media (max-width:1340px){
+    .section {
+        text-align: center;
+        padding: 40px 0 40px;
+        margin: 0 100px;
+    }
+
+    .modal-open,
+    .modal-open2,
+    .modal-open3{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin: auto;
+        cursor: pointer;
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width:990px){
+    .pink {
+        padding-bottom: 40px;
+    }
+
+    .black {
+        background-image: url(./img/back_black.png);
+        background-repeat: repeat;
+        padding: 10px 0 40px;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+        line-height: 10px;
+        margin-top: 10px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .section {
+        text-align: center;
+        padding: 40px 0 40px;
+        margin: 0 10px;
+    }
+
+    .about-contents {
+        padding: 10px 0;
+    }
+
+    .summarize-contents {
+        padding: 10px 0;
+    }
+
+    .characterristics {
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 15px;
+        background-color: #595959;
+    }
+
+
+    .modal-open,
+    .modal-open2,
+    .modal-open3{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        margin: 0 15px;
+    }
+
+    .whiteColor {
+        border: 5px solid #F1D3E5;
+    }
+    
+    .blackColor {
+        border: 5px solid #F1D3E5;
+    }
+    
+    .grayColor {
+        border: 5px solid #333;
+    }
+
+    .bland img{
+        height: 150px;
+        width: auto;
+        margin: 0 15px;
+    }
+    
+    .intax img{
+        height: 250px;
+        width: auto;
+        margin: 0 15px;
+    }
+}
+
+@media (max-width:560px){
+    .bland img{
+        height: 25vw;
+        width: auto;
+        margin: 0 15px;
+    }
+    
+    .intax img{
+        height: 50vw;
+        width: auto;
+        margin: 0 15px;
+    }
+
+    .about-contents {
+        border: 5px solid #F1D3E5;
+    }
+
+    .modal-open,
+    .modal-open2,
+    .modal-open3{
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        margin: 0 10px;
+    }
+
+    /*モーダル枠の指定*/
+    .modal-body,
+    .modal-body2,
+    .modal-body3 {
+        max-width: 90%;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    footer{
+        font-size: 12px;
+    }
+}
