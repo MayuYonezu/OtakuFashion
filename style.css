@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 h1,
@@ -38,21 +39,6 @@ a :hover{
     transition: 1s;
 }
 
-header {
-    height: 80px;
-    background-color: #898989;
-}
-
-header .container {
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-
-header .containe p {
-    padding: 0;
-}
-
 .firstView {
     width: 100vw;
     height: 56.25vw;
@@ -66,7 +52,6 @@ header .containe p {
 .pink {
     background-image: url(./img/back_pink.png);
     background-repeat: repeat;
-    padding-bottom: 80px;
 }
 
 .pink h1, 
@@ -350,10 +335,6 @@ footer{
         margin-top: 10px;
     }
 
-    p {
-        font-size: 14px;
-    }
-
     .section {
         text-align: center;
         padding: 40px 0 40px;
@@ -441,10 +422,6 @@ footer{
     .modal-body2,
     .modal-body3 {
         max-width: 90%;
-    }
-
-    p {
-        font-size: 12px;
     }
 
     footer{
